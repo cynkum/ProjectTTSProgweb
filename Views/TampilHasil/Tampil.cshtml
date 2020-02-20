@@ -1,0 +1,18 @@
+@{
+   Layout = "_Layout"; 
+}
+
+<h2>Detail Data</h2>
+
+<p>Registrasi Berhasil </p>
+<p>Nama Anda : @Model.Firstname @Model.Lastname </p>
+<p>Alamat : @Model.Address</p>
+<p>Gender : @Model.Gender</p>
+<p>Telp : @Model.Telp</p>
+
+@if(@Model.Hobby !=null){
+   <span>Hobby : </span>
+   @for (int i=0;i<Model.Hobby.Length; i++){
+      <span>@Model.Hobby[i] @if(i !=Model.Hobby.Length-1){<span>,</span>}</span>
+   }
+}
